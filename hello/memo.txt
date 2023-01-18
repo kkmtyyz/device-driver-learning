@@ -1,0 +1,9 @@
+# apt install linux-headers-$(uname -r)
+$ make -C /lib/modules/5.10.0-20-amd64/build M=`pwd` modules
+# insmod hello.ko
+# dmesg
+# lsmod | grep hello
+# rmmod hello
+# dmesg
+# less /var/log/kern.log
+$ make -C /lib/modules/5.10.0-20-amd64/build M=`pwd` clean
