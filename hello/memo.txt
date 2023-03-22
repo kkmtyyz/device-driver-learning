@@ -11,10 +11,6 @@ $ make -C /lib/modules/5.10.0-20-amd64/build M=`pwd` clean
 
 // WSL2
 $ git clone https://github.com/microsoft/WSL2-Linux-Kernel.git -b linux-msft-wsl-5.15.90.1
-# apt install build-essential flex bison dwarves libssl-dev libelf-dev
-$ cd WSL2-Linux-Kernel
-$ make KCONFIG_CONFIG=Microsoft/config-wsl -j 8
-
 $ make -C WSL2-Linux-Kernel M=`pwd` modules
 # insmod hello.ko
 # dmesg
